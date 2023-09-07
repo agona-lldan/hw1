@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>AGONA HW1</title>
+  </head>
+  <body>
+    <header>
+      <h1>React - Хуки</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./components.html">Компоненты</a></li>
+          <li><a href="./hooks.html">Хуки</a></li>
+          <li><a href="./typescript.html">TypeScript</a></li>
+          <li><a href="./poll.html">Опрос</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Название хука</th>
+              <th>Для чего используется</th>
+              <th>Пример</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="3">Основные</th>
+            </tr>
+            <tr>
+              <th>useState</th>
+              <td>
+                Возвращает значение с состоянием и функцию для его обновления. Во время
+                первоначального рендеринга возвращаемое состояние (<mark>state</mark>) совпадает со
+                значением, переданным в качестве первого аргумента (<mark>initialState</mark>).
+                Функция <mark>setState</mark> используется для обновления состояния. Она принимает
+                новое значение состояния и ставит в очередь повторный рендер компонента.
+              </td>
+              <td><code>const [state, setState] = useState(initialState);</code></td>
+            </tr>
+            <tr>
+              <th>useEffect</th>
+              <td>
+                Принимает функцию, которая содержит императивный код, возможно, с эффектами.
+                Мутации, подписки, таймеры, логирование и другие побочные эффекты не допускаются
+                внутри основного тела функционального компонента (называемого этапом рендеринга
+                React). Это приведёт к запутанным ошибкам и несоответствиям в пользовательском
+                интерфейсе. Вместо этого используйте <mark>useEffect</mark>. Функция, переданная в
+                <mark>useEffect</mark>, будет запущена после того, как рендер будет зафиксирован на
+                экране. Думайте об эффектах как о лазейке из чисто функционального мира React в мир
+                императивов. По умолчанию эффекты запускаются после каждого завершённого рендеринга,
+                но вы можете решить запускать их только при изменении определённых значений.
+              </td>
+              <td><code>useEffect(didUpdate);</code></td>
+            </tr>
+            <tr>
+              <th>useContext</th>
+              <td>
+                Принимает объект контекста (значение, возвращённое из
+                <mark>React.createContext</mark>) и возвращает текущее значение контекста для этого
+                контекста
+              </td>
+              <td><code>const value = useContext(MyContext);</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <cite
+          >Источник -
+          <a href="https://ru.legacy.reactjs.org/docs/hooks-reference.html">React API</a></cite
+        >
+      </section>
+    </main>
+    <footer>
+      <strong>Created by lldan </strong>
+      <time datetime="2023-09-09">9 сентября 2023</time>
+    </footer>
+  </body>
+</html>
