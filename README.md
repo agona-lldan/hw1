@@ -1,3 +1,3 @@
 # спокойной ночи
 
-https://lld4n.github.io/agona-hw1/
+[посмотреть можно здесь](https://agona-lldan.github.io/hw1/)
